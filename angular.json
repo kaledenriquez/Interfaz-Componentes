@@ -24,10 +24,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ti-tecnologico-de-monterrey-oficial/ds-ng/assets/fonts/",
+                "output": "/assets/fonts/"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@ti-tecnologico-de-monterrey-oficial/ds-ng/assets/styles/main.min.css"
             ],
             "scripts": []
           },
