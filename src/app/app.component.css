@@ -1,7 +1,8 @@
 main{
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    padding: 5rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 5rem;
 }
