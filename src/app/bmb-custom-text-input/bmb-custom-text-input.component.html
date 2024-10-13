@@ -1,0 +1,14 @@
+<form bmbLayout [alignItems]="'center'" [justify]="'center'" [dynamicCols]="false" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <bmb-input
+        [label]="'Parámetros de entrada'"
+        [placeholder]="'L00000000...'"
+        [errorMessage]="'Error'"
+        [disabled]="false"
+        [isRequired]="false"
+        [appearance]="'normal'"
+        [control]="getFormControl('name')"
+        [showError]="showErrors['name']"
+      />
+
+      <button bmbButton appearance="primary" type="submit">Submit</button>
+  </form>

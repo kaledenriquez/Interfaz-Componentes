@@ -10,8 +10,11 @@ import { BmbTopBarComponent,
   BmbLayoutDirective,
   BmbLayoutItemDirective,
   BmbDropdownComponent,
+  BmbInputComponent
 } from '@ti-tecnologico-de-monterrey-oficial/ds-ng';
 import { FormControl } from '@angular/forms';
+
+import { BmbCustomTextInputComponent } from './bmb-custom-text-input/bmb-custom-text-input.component';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +30,8 @@ import { FormControl } from '@angular/forms';
     BmbCardContentComponent,
     BmbLayoutDirective,
     BmbLayoutItemDirective,
-    BmbDropdownComponent
+    BmbDropdownComponent,
+    BmbCustomTextInputComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
