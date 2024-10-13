@@ -1,6 +1,55 @@
 <main class="main">
-  <app-navbar></app-navbar>
-  <app-selectors></app-selectors>
+
+    <bmb-top-bar
+    [positionButtonMenu]="'left'"
+    [hasLogoutButton]="false"
+    [appName]="'Interfaz para probar componentes de datos'"
+    [appSubTitle]="'Tec.data'"
+    [showLang]="false"
+    [lang]="'es'"
+  >
+  
+  <bmb-theme [initialTheme]="'dark'" [showControls]="true"></bmb-theme></bmb-top-bar>
+
+  <div bmbLayout [gapSize]="'l'" [justify]="'spaceAround'" [dynamicCols]="true" >
+
+    <bmb-dropdown
+    [options]="['Apple', 'Banana', 'Orange', 'Pear', 'Grape']"
+    [placeholder]="'Selecciona opciones'"
+    (onValueChange)="handleSelectionChange($event)"
+    [formControl]="dropdownControl"
+    ></bmb-dropdown>
+    <div *ngIf="selectedOptions.length">
+        <h4>Seleccionados:</h4>
+        <div *ngFor="let option of selectedOptions; let i = index">
+            <span>{{ option }}</span>
+            <button (click)="removeSelection(i)">Eliminar</button>
+        </div>
+    </div>
+</div>
+
+  <div bmbLayout [gapSize]="'l'" [justify]="'spaceAround'" [dynamicCols]="true">
+    <bmb-card [borderRadius]="'l'" [type]="'primary'">
+      <bmb-card-header>
+        <h3>Card 1</h3>
+      </bmb-card-header>
+      <bmb-card-content>
+        <p>Contenido del primer card.</p>
+      </bmb-card-content>
+    </bmb-card>
+  
+    <bmb-card [borderRadius]="'l'" [type]="'secondary'">
+      <bmb-card-header>
+        <h3>Card 2</h3>
+      </bmb-card-header>
+      <bmb-card-content>
+        <p>Contenido del segundo card.</p>
+      </bmb-card-content>
+    </bmb-card>
+  </div>
+  
+
+  
 </main>
 
 
